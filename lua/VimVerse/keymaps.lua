@@ -13,6 +13,7 @@ vim.g.maplocalleader = " "
 -- fast buffer navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>pv", ":E<CR>", opts)
 
 -- REMAPPING IN INSERT MODE --
 keymap("i", "jk", "<ESC>", opts)

@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
   -- Styling 
-  use "lunarvim/darkplus.nvim"
+  -- use "lunarvim/darkplus.nvim"
 
   -- Auto Completions
   use "hrsh7th/nvim-cmp"      -- The Completion Plugin
@@ -70,6 +70,14 @@ return packer.startup(function(use)
     -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+
+  use{
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+  }
+  use "nvim-treesitter/playground"
+  --use 'rockerBOO/boo-colorscheme-nvim'
+  use 'christianchiarulli/nvcode-color-schemes.vim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

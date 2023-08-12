@@ -1,5 +1,6 @@
 local opts = { noremap = true, silent = true }
 local termp_opts = { silent = true }
+local builtin = require('telescope.builtin')
 
 -- Make Easily Accessible
 local keymap = vim.keymap.set
@@ -36,9 +37,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+-- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+-- keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
-
-
-
+keymap("n", "<leader>pf", builtin.find_files, opts)
+keymap("n", "<C-p>", builtin.find_files, opts)

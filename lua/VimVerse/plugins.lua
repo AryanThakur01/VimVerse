@@ -44,6 +44,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "numToStr/Comment.nvim" -- Easily Comment Stuffs
 
   -- Styling 
   -- use "lunarvim/darkplus.nvim"
@@ -72,6 +73,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
+  -- Treesitter
   use{
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
@@ -79,6 +81,7 @@ return packer.startup(function(use)
   use "nvim-treesitter/playground"
   --use 'rockerBOO/boo-colorscheme-nvim'
   use 'christianchiarulli/nvcode-color-schemes.vim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

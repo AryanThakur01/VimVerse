@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local termp_opts = { silent = true }
+-- local termp_opts = { silent = true }
 local builtin = require('telescope.builtin')
 
 -- Make Easily Accessible
@@ -10,16 +10,23 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- REMAPPING IN NORMAL MODE --
--- fast buffer navigation
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<leader>pv", ":E<CR>", opts)
+-- NORMAL --
+-- Better Window Navigation
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
--- REMAPPING IN INSERT MODE --
+-- fast buffer navigation
+-- keymap("n", "<S-l>", ":bnext<CR>", opts)
+-- keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
+
+-- INSERT --
 keymap("i", "jk", "<ESC>", opts)
 
--- REMAPPING IN VISUAL MODE --
+-- VISUAL --
 -- indentation
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -29,7 +36,7 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
--- REMAPPING IN VISUAL BLOCK MODE --
+-- VISUAL BLOCK --
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)

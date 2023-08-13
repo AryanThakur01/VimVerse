@@ -6,4 +6,3 @@ end
 
 require("VimVerse.lsp.mason")
 require("VimVerse.lsp.handlers").setup()
-require("VimVerse.lsp.null-ls")

@@ -18,8 +18,8 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- fast buffer navigation
--- keymap("n", "<S-l>", ":bnext<CR>", opts)
--- keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 
@@ -48,4 +48,4 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 keymap("n", "<leader>pf", builtin.find_files, opts)
-keymap("n", "<C-p>", builtin.find_files, opts)
+keymap("n", "<C-p>", builtin.git_files, opts)

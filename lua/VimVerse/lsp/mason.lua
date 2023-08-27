@@ -2,7 +2,11 @@ local servers = {
   "lua_ls",
   "pyright",
   "jsonls",
-  "tsserver"
+  "tsserver",
+  "clangd",
+  "emmet_ls",
+  "tailwindcss",
+  "theme_check"
 }
 
 local settings = {

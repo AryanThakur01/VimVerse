@@ -1,6 +1,6 @@
 local configs = require("nvim-treesitter.configs")
 configs.setup {
-  ensure_installed = {"c", "cpp", "rust", "javascript", "typescript"},
+  ensure_installed = {"c", "cpp", "rust", "javascript", "typescript", "html"},
   sync_install = false,
   --ignore_install = { "" }, -- List of parsers to ignore installing
   auto_install = true,

@@ -20,7 +20,8 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- fast buffer navigation
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+-- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>pv", ":E<CR>", opts)
 
 
 -- INSERT --

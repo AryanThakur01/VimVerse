@@ -45,6 +45,8 @@ local options = {
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
 }
 
+vim.opt.colorcolumn = "80"
+
 for key, value in pairs(options)
   do
     vim.opt[key] = value

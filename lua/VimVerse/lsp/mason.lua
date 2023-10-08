@@ -1,6 +1,7 @@
 local servers = {
   "lua_ls",
-  "pyright",
+  -- "pyright",
+  "pylsp",
   "jsonls",
   "tsserver",
   "clangd",

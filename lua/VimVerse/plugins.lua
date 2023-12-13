@@ -92,6 +92,9 @@ return packer.startup(function(use)
   -- Prettier using neoformat
   use 'sbdchd/neoformat'
 
+  -- Color Highlight
+  use 'brenoprata10/nvim-highlight-colors'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

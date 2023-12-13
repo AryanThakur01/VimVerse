@@ -7,7 +7,9 @@ local servers = {
   "clangd",
   "emmet_ls",
   "tailwindcss",
-  "theme_check"
+  "theme_check",
+  "cssls",
+  "mdx_analyzer"
 }
 
 local settings = {

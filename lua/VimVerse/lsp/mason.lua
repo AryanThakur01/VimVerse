@@ -1,15 +1,15 @@
 local servers = {
   "lua_ls",
-  -- "pyright",
+  ---- "pyright",
   "pylsp",
   "jsonls",
   "tsserver",
-  "clangd",
-  "emmet_ls",
+  --"clangd",
+  --"emmet_ls",
   "tailwindcss",
-  "theme_check",
+  --"theme_check",
   "cssls",
-  "mdx_analyzer"
+  --"mdx_analyzer"
 }
 
 local settings = {

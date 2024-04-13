@@ -46,7 +46,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
--- keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>pg", "<cmd>Telescope live_grep<cr>", opts)
 
 keymap("n", "<leader>pf", builtin.find_files, opts)
 keymap("n", "<C-p>", builtin.git_files, opts)

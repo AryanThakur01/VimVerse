@@ -4,11 +4,14 @@ local servers = {
   "pylsp",
   "jsonls",
   "tsserver",
-  --"clangd",
-  --"emmet_ls",
+  "clangd",
+  "emmet_ls",
   "tailwindcss",
   --"theme_check",
   "cssls",
+  "denols",
+  "asm_lsp",
+  "jdtls"
   --"mdx_analyzer"
 }
 
@@ -45,6 +48,18 @@ for _, server in pairs(servers) do
     capabilities = require("VimVerse.lsp.handlers").capabilities,
   }
 
+  -- ================= Configurations for specific lsp servers ================
+  if server=="tsserver" then
+    opts.root_dir = lspconfig.util.root_pattern("package.json")
+    opts.single_file_support = false
+  elseif server=="denols" then
+    opts.root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
+  elseif server=="jdtls" then
+   opts.root_dir =lspconfig.util.root_pattern("gradlew", "settings.gradle") 
+  --  opts.cmd = {'/path/to/jdt-language-server/bin/jdtls'}
+  end;
+  -- =======================XX ===== XX ===== XX ==============================
+
   server = vim.split(server, "@")[1]
 
   local require_ok, conf_opts = pcall(require, "VimVerse.lsp.settings." .. server)
@@ -54,3 +69,8 @@ for _, server in pairs(servers) do
 
   lspconfig[server].setup(opts)
 end
+
+lspconfig.denols.setup {
+  on_attach = on_attach,
+  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+}

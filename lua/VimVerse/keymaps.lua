@@ -21,7 +21,8 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>pv", ":E<CR>", opts)
+keymap("n", "<leader>pv", ":NvimTreeOpen<CR>", opts)
+keymap("n", "<leader>pc", ":NvimTreeClose<CR>", opts)
 
 
 -- INSERT --

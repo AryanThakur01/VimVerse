@@ -16,6 +16,8 @@ vim.opt.termguicolors = true
 -- OR setup with some options
 nvim_tree.setup({
   sort_by = "case_sensitive",
+  disable_netrw = false,
+  respect_buf_cwd = false,
   view = {
     width = 30,
   },
@@ -24,5 +26,13 @@ nvim_tree.setup({
   },
   filters = {
     dotfiles = true,
+  },
+
+  tab = {
+    sync = {
+      open = false,
+      close = true,
+      ignore = {},
+    },
   },
 })

@@ -49,6 +49,7 @@ return packer.startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+  use "kylechui/nvim-surround"
 
   -- Styling 
   -- use "lunarvim/darkplus.nvim"

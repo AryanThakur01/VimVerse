@@ -26,6 +26,7 @@ local schemas = {
     description = "ESLint config",
     fileMatch = {
       ".eslintrc.json",
+      ".eslintrc.cjs",
       ".eslintrc",
     },
     url = "https://json.schemastore.org/eslintrc.json",
@@ -41,6 +42,7 @@ local schemas = {
       ".prettierrc",
       ".prettierrc.json",
       "prettier.config.json",
+      "prettier.config.cjs",
     },
     url = "https://json.schemastore.org/prettierrc",
   },

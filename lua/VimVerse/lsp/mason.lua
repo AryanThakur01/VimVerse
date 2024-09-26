@@ -11,7 +11,8 @@ local servers = {
   "cssls",
   "denols",
   "asm_lsp",
-  "jdtls"
+  "jdtls",
+  "prismals"
   --"mdx_analyzer"
 }
 

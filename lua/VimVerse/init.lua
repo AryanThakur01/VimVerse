@@ -1,3 +1,4 @@
+require("VimVerse.nvim-surround")
 require("VimVerse.treesitter")
 require("VimVerse.options")
 require("VimVerse.keymaps")

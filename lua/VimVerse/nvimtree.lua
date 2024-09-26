@@ -12,6 +12,12 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
+vim.cmd([[
+    :hi      NvimTreeExecFile    guifg=#ffa0a0
+    :hi      NvimTreeSpecialFile guifg=#ff80ff gui=underline
+    :hi      NvimTreeSymlink     guifg=Yellow  gui=italic
+    :hi link NvimTreeImageFile   Title
+]])
 
 -- OR setup with some options
 nvim_tree.setup({

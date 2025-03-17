@@ -1,5 +1,6 @@
 local servers = {
   "lua_ls",
+  "eslint",
   ---- "pyright",
   "pylsp",
   "jsonls",
@@ -51,7 +52,12 @@ for _, server in pairs(servers) do
   }
 
   -- ================= Configurations for specific lsp servers ================
-  if server=="tsserver" then
+  if server == "eslint" then
+    opts.root_dir = lspconfig.util.root_pattern(".eslintrc", ".eslintrc.js", ".eslintrc.json", "package.json")
+    opts.settings = {
+      workingDirectory = { mode = "location" }, -- This makes eslint-lsp respect the local project
+    }
+  elseif server=="tsserver" then
     opts.root_dir = lspconfig.util.root_pattern("package.json")
     opts.single_file_support = false
   elseif server=="denols" then

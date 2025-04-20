@@ -14,7 +14,8 @@ local servers = {
   "denols",
   "asm_lsp",
   "jdtls",
-  "prismals"
+  "prismals",
+  "lexical"
   --"mdx_analyzer"
 }
 

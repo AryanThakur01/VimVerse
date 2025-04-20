@@ -50,6 +50,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>pg", "<cmd>Telescope live_grep<cr>", opts)
 
 keymap("n", "<leader>ef", "<cmd>EslintFixAll<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>Neoformat<cr>", opts)
 
 keymap("n", "<leader>pf", builtin.find_files, opts)
 keymap("n", "<C-p>", builtin.git_files, opts)

@@ -1,22 +1,18 @@
 local servers = {
   "lua_ls",
   "eslint",
-  ---- "pyright",
   "pylsp",
   "jsonls",
-  -- "tsserver",
   "ts_ls",
   "clangd",
   "emmet_ls",
   "tailwindcss",
-  --"theme_check",
   "cssls",
   "denols",
   "asm_lsp",
   "jdtls",
   "prismals",
   "lexical"
-  --"mdx_analyzer"
 }
 
 local settings = {
@@ -65,7 +61,8 @@ for _, server in pairs(servers) do
     opts.root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
   elseif server=="jdtls" then
    opts.root_dir =lspconfig.util.root_pattern("gradlew", "settings.gradle") 
-  --  opts.cmd = {'/path/to/jdt-language-server/bin/jdtls'}
+  elseif server=='pylsp' then
+    opts.root_dir = lspconfig.util.root_pattern(".git", "setup.py", "tox.ini", "requirements.txt")
   end;
   -- =======================XX ===== XX ===== XX ==============================
 
@@ -78,8 +75,3 @@ for _, server in pairs(servers) do
 
   lspconfig[server].setup(opts)
 end
-
-lspconfig.denols.setup {
-  on_attach = on_attach,
-  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-}

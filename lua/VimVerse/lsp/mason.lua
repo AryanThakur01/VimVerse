@@ -63,6 +63,14 @@ for _, server in pairs(servers) do
    opts.root_dir =lspconfig.util.root_pattern("gradlew", "settings.gradle") 
   elseif server=='pylsp' then
     opts.root_dir = lspconfig.util.root_pattern(".git", "setup.py", "tox.ini", "requirements.txt")
+    opts.settings = {
+      pylsp = {
+        plugins = {
+          autopep8 = { enabled = true },
+          pycodestyle = { enabled = true },
+        },
+      },
+    }
   end;
   -- =======================XX ===== XX ===== XX ==============================
 

@@ -9,7 +9,6 @@ local servers = {
   "tailwindcss",
   "cssls",
   "denols",
-  "asm_lsp",
   "jdtls",
   "prismals",
   "lexical"

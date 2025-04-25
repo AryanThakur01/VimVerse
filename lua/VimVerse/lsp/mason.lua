@@ -11,7 +11,8 @@ local servers = {
   "denols",
   "jdtls",
   "prismals",
-  "lexical"
+  "lexical",
+  "autopep8"
 }
 
 local settings = {

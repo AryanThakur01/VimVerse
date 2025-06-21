@@ -1,7 +1,6 @@
 local servers = {
   "lua_ls",
   "eslint",
-  "pylsp",
   "jsonls",
   "ts_ls",
   "clangd",
@@ -12,7 +11,11 @@ local servers = {
   "jdtls",
   "prismals",
   "lexical",
-  "autopep8"
+
+  "pylsp",
+  -- "ruff",
+  -- "black",
+  -- "autopep8"
 }
 
 local settings = {
@@ -66,8 +69,10 @@ for _, server in pairs(servers) do
     opts.settings = {
       pylsp = {
         plugins = {
-          autopep8 = { enabled = true },
-          pycodestyle = { enabled = true },
+          ruff = { enabled = true },
+          black = { enabled = false },
+          pycodestyle = { enabled = false },
+          autopep8 = { enabled = false },
         },
       },
     }

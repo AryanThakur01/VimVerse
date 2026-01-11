@@ -7,7 +7,7 @@ local servers = {
   "emmet_ls",
   "tailwindcss",
   "cssls",
-  "denols",
+  -- "denols",
   "jdtls",
   "prismals",
   "lexical",
@@ -53,15 +53,18 @@ for _, server in pairs(servers) do
 
   -- ================= Configurations for specific lsp servers ================
   if server == "eslint" then
-    opts.root_dir = lspconfig.util.root_pattern(".eslintrc", ".eslintrc.js", ".eslintrc.json", "package.json")
+    opts.root_dir = lspconfig.util.root_pattern(".eslintrc", ".eslintrc.js", ".eslintrc.json", "package.json", "eslint.config.js")
     opts.settings = {
       workingDirectory = { mode = "location" }, -- This makes eslint-lsp respect the local project
+      experimental = {
+        useFlatConfig = false, -- Use flat config for eslint
+      },
     }
   elseif server=="tsserver" then
     opts.root_dir = lspconfig.util.root_pattern("package.json")
     opts.single_file_support = false
-  elseif server=="denols" then
-    opts.root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
+  -- elseif server=="denols" then
+  --   opts.root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
   elseif server=="jdtls" then
    opts.root_dir =lspconfig.util.root_pattern("gradlew", "settings.gradle") 
   elseif server=='pylsp' then

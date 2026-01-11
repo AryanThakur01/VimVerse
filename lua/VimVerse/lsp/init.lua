@@ -4,5 +4,5 @@ if not status_ok then
   return
 end
 
-require("VimVerse.lsp.mason")
 require("VimVerse.lsp.handlers").setup()
+require("VimVerse.lsp.mason")

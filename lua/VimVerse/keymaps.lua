@@ -54,3 +54,27 @@ keymap("n", "<leader>ff", "<cmd>Neoformat<cr>", opts)
 
 keymap("n", "<leader>pf", builtin.find_files, opts)
 keymap("n", "<C-p>", builtin.git_files, opts)
+
+------------------------------------------------------
+-- FOLDING (Leader-based shortcuts)
+------------------------------------------------------
+
+-- Enable better default folding
+vim.o.foldmethod = "indent"         -- or "expr" with treesitter
+vim.o.foldlevel = 99                -- open everything by default
+vim.o.foldenable = true
+
+-- Toggle fold under cursor
+keymap("n", "<leader>ft", "za", opts)      -- (f)old (t)oggle
+
+-- Fold all
+keymap("n", "<leader>fa", "zM", opts)      -- (f)old (a)ll
+
+-- Unfold all
+keymap("n", "<leader>fA", "zR", opts)      -- (f)old (A)ll-open
+
+-- Fold one level
+keymap("n", "<leader>fc", "zc", opts)      -- (f)old (c)lose
+
+-- Unfold one level
+keymap("n", "<leader>fo", "zo", opts)      -- (f)old (o)pen

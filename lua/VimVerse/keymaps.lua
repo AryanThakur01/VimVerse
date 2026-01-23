@@ -78,3 +78,9 @@ keymap("n", "<leader>fc", "zc", opts)      -- (f)old (c)lose
 
 -- Unfold one level
 keymap("n", "<leader>fo", "zo", opts)      -- (f)old (o)pen
+
+-- Codecompanion
+
+vim.keymap.set({ "n", "v" }, "cc", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
